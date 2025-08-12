@@ -3,8 +3,7 @@ package com.assigment.library.entity;
 import com.assigment.library.baseclasses.AbstractBaseEntity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 /**
  * Book entity — each copy is a separate row (unique UUID id).
@@ -12,7 +11,8 @@ import lombok.Setter;
  */
 @Entity
 @Table(name = "books", indexes = {@Index(name = "idx_isbn", columnList = "isbn")})
-@Getter @Setter
+@Data
+@NoArgsConstructor
 public class Book extends AbstractBaseEntity {
 
     @NotBlank

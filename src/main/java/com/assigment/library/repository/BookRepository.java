@@ -1,10 +1,13 @@
 package com.assigment.library.repository;
-import com.assigment.library.entity.Book;
-import org.springframework.data.jpa.repository.*;
-import jakarta.persistence.LockModeType;
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
-import java.util.List;
+
+import org.springframework.data.jpa.repository.*;
+
+import com.assigment.library.entity.Book;
+
+import jakarta.persistence.LockModeType;
 
 public interface BookRepository extends JpaRepository<Book, UUID> {
     List<Book> findByIsbn(String isbn);

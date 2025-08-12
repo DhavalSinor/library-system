@@ -6,14 +6,11 @@ docker compose up --build -d
 # App at http://localhost:8080
 # Swagger UI: http://localhost:8080/swagger-ui/index.html
 
-Push Docker Image
-docker push docker.io/dhaval777/library-app:latest
-
-Swger Path URL:
+Swger Path URL for API uses:
 http://localhost:8080/swagger-ui.html
 
 Run unit tests:
-mvn test
+? //please sugges to run
 
 
 Database choice & justification
