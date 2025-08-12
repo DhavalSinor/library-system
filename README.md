@@ -1,11 +1,11 @@
-###Build the Application (skip tests)
+**###Build the Application (skip tests)**
 
-**mvn clean package -DskipTests**
+mvn clean package -DskipTests
 
 
-###Run with Docker Compose (DEV Environment)
+**###Run with Docker Compose (DEV Environment)**
 
-**docker compose up --build -d**
+docker compose up --build -d
 
 
 **#App:** **http://localhost:8080**
@@ -25,3 +25,4 @@
 4. PostgreSQL (prod/dev) / H2 (optional dev)
 5. Docker + Docker Compose
 6. Swagger/OpenAPI for API documentation
+7. CI/CD with gitAction
