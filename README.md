@@ -7,6 +7,9 @@ mvn clean package -DskipTests
 
 docker compose up --build -d
 
+**###Run Test cases for Service and Repo layer**
+
+mvn test
 
 **#App:** **http://localhost:8080**
 
