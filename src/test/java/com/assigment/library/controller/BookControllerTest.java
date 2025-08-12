@@ -9,7 +9,8 @@ import org.junit.jupiter.api.Test;
 import org.mockito.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.context.annotation.Import;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.UUID;
@@ -20,10 +21,11 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @WebMvcTest(BookController.class)
+@Import(BookControllerTestConfig.class)
 class BookControllerTest {
     @Autowired private MockMvc mvc;
     @Autowired private ObjectMapper mapper;
-    @MockBean private BookService bookService;
+    @Autowired private BookService bookService;
 
     @Test
     void addBook_returnsSaved() throws Exception {

@@ -2,9 +2,9 @@ Maven BUILD:
 mvn clean package -DskipTests
 
 Run with docker-compose (DEV Environment)
-docker compose up --build
-# App at http://localhost:8080
-# Swagger UI: http://localhost:8080/swagger-ui/index.html
+docker compose up --build -d
+# App at http://localhost:7080
+# Swagger UI: http://localhost:7080/swagger-ui/index.html
 
 Push Docker Image
 docker push docker.io/dhaval777/library-app:latest

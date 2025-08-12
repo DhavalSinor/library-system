@@ -1,8 +1,11 @@
 spring:
   datasource:
-    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:library}
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5433}/${DB_NAME:library}
     username: ${DB_USER:postgres}
     password: ${DB_PASSWORD:postgres}
+  hikari:
+    maximum-pool-size: ${SPRING_DATASOURCE_HIKARI_MAXIMUM_POOL_SIZE:10}
+    minimum-idle: ${SPRING_DATASOURCE_HIKARI_MINIMUM_IDLE:5}
   jpa:
     hibernate:
       ddl-auto: update
